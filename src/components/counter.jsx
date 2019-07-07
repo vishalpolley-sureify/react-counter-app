@@ -5,7 +5,8 @@ class Counter extends Component {
     count: 0
   };
 
-  handleIncrement = () => {
+  handleIncrement = product => {
+    console.log(product.id);
     this.setState({ count: this.state.count + 1 });
   };
 
@@ -14,7 +15,7 @@ class Counter extends Component {
       <React.Fragment>
         <span className={this.getBadgeClasses()}>{this.formatCount()}</span>
         <button
-          onClick={this.handleIncrement} // Only reference is passed
+          onClick={() => this.handleIncrement({ id: 1 })} // Only reference is passed
           className="btn btn-secondary btn-sm"
         >
           Increment
