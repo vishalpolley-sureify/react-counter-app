@@ -19,6 +19,7 @@ class App extends Component {
   }
 
   componentDidMount() {
+    // Ajax Call
     console.log("App - Mounted");
   }
 
